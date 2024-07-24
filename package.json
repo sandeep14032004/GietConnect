@@ -1,0 +1,24 @@
+{
+  "name": "gietconnect",
+  "version": "1.0.0",
+  "description": "chat application",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeep14032004/GietConnect.git"
+  },
+  "author": "sandeep pati,binayak pradhan,debaraj tadu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandeep14032004/GietConnect/issues"
+  },
+  "homepage": "https://github.com/sandeep14032004/GietConnect#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
