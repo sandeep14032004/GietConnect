@@ -38,6 +38,7 @@ const SideDrawer = () => {
   const [loading, setLoading] = useState(false);
   const [loadingChat, setLoadingChat] = useState(false);
   const { user } = ChatState();
+
   return (
     <>
       <Box
@@ -65,6 +66,7 @@ const SideDrawer = () => {
             <MenuButton p={1}>
               <BellIcon fontSize="2xl" m={1} />
             </MenuButton>
+            <MenuList>{/* Menu items should be here */}</MenuList>
           </Menu>
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
@@ -75,6 +77,7 @@ const SideDrawer = () => {
                 src={user.pic}
               />
             </MenuButton>
+            <MenuList>{/* Menu items should be here */}</MenuList>
           </Menu>
         </div>
       </Box>
