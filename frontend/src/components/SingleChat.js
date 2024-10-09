@@ -23,7 +23,11 @@ import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
 
-const ENDPOINT = "https://giet-connect-zqds.onrender.com";
+const ENDPOINT =
+  process.env.NODE_ENV === "production"
+    ? "https://giet-connect-zqds.onrender.com"
+    : "http://localhost:5000";
+
 var socket;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

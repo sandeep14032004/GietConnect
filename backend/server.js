@@ -13,13 +13,7 @@ const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
   cors: {
-    origin: (origin, callback) => {
-      if (origin === "https://giet-connect-zqds.onrender.com" || !origin) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
