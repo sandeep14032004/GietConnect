@@ -1,0 +1,37 @@
+{
+  "name": "gietconnect",
+  "version": "1.0.0",
+  "description": "chat application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server":"nodemon backend/server.js",
+    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeep14032004/GietConnect.git"
+  },
+  "author": "sandeep pati,binayak pradhan,debaraj tadu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandeep14032004/GietConnect/issues"
+  },
+  "homepage": "https://github.com/sandeep14032004/GietConnect#readme",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.3.1",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.4",
+    "react-router-dom": "^5.3.4",
+    "socket.io": "^4.8.0"
+  }
+}

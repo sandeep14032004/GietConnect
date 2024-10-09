@@ -1,0 +1,17 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+    .chatbox-responsive {
+        display: flex;
+        width: 100%;
+    }
+
+    .mychats-responsive {
+        display: none;
+    }
+}
