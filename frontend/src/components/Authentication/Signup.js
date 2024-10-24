@@ -23,10 +23,26 @@ const Signup = () => {
   const submitHandler = async () => {
     setLoading(true);
 
+    const gietEmailPattern =
+      /^[0-9]{2}(cse|ece|eee|mech|civil|it|bt|che|agri|bca|bba|mca|msc|mba|ee|cst|ds|aiml)[0-9]{1,4}\.[a-z]+@giet\.edu$/;
+
     if (!email) {
       toast({
         title: "Invalid Email",
         description: "Enter Email address",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      setLoading(false);
+      return;
+    }
+
+    if (!gietEmailPattern.test(email)) {
+      toast({
+        title: "Invalid GIET Email",
+        description: "Please enter a valid GIET email address.",
         status: "warning",
         duration: 5000,
         isClosable: true,
@@ -60,7 +76,6 @@ const Signup = () => {
       return;
     }
 
-    console.log(name, email, password, pic);
     try {
       const config = {
         headers: {
